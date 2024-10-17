@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>jQuery UI Accordion - Default functionality</title>
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.14.0/themes/base/jquery-ui.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/resources/demos/style.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.0/jquery-ui.js"></script>
+    <script>
+      $(function () {
+        $("#accordion").accordion({
+          collapsible: true, // Allow all panels to be closed
+          active: false, // Start with all panels closed
+        });
+
+        // Initialize the nested accordion
+        $("#accordion1").accordion({
+          collapsible: true,
+          active: false,
+        });
+        $("#accordion2").accordion({
+          collapsible: true,
+          active: false,
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <header class="bg-gray-800 text-white p-4">
+      <div class="container mx-auto">
+        <h1 class="text-2xl font-bold">React FAQ</h1>
+      </div>
+    </header>
+    <div id="accordion">
+      <h3>What is React?</h3>
+      <div>
+        <p>
+          React is a JavaScript library for building user interfaces,
+          particularly for single-page applications. It allows you to create
+          reusable UI components and efficiently update them when data changes
+        </p>
+      </div>
+      <h3>What is JSX?</h3>
+      <div>
+        <p>
+          JSX stands for JavaScript XML. It's a syntax extension that allows you
+          to write HTML-like structures within your JavaScript code. This makes
+          it easier to visualize the UI you're building.
+        </p>
+      </div>
+      <h3>What is the Virtual DOM?</h3>
+      <div>
+        <p>
+          The Virtual DOM is a lightweight in-memory representation of the
+          actual DOM. When data changes in your React application, React first
+          updates the Virtual DOM, then compares it to the actual DOM, and only
+          updates the parts of the actual DOM that have changed. This makes
+          updates more efficient.
+        </p>
+      </div>
+      <h3>What are components?</h3>
+      <div>
+        <p>
+          Components are the building blocks of React applications. They are
+          reusable pieces of code that encapsulate a specific part of the UI.
+          Components can be simple or complex, and they can be composed together
+          to create more complex UIs.    
+        </p>
+      </div>
+
+      <h3>What are props?</h3>
+      <div>
+        <p>
+          Props are a way to pass data from a parent component to a child
+          component. They are read-only and cannot be modified by the child
+          component.
+        </p>
+      </div>
+
+      <h3>What is state?</h3>
+      <div>
+        <p>
+          State is a way to store data that is internal to a component. When the
+          state changes, the component re-renders.  
+        </p>
+      </div>
+
+      <h3>What are React Hooks?</h3>
+      <div>
+        <p>
+          Hooks are functions that let you "hook into" React state and lifecycle
+          features from functional components. They were introduced in React
+          16.8 and provide a more concise and functional way to manage state and
+          side effects.        
+        </p>
+      </div>
+      <h3>What is Context API?</h3>
+      <div>
+        <p>
+          The Context API is a way to share data between components without
+          having to pass props down through the entire component tree.
+        </p>
+      </div>
+
+      <h3>What are Higher-Order Components (HOCs)?</h3>
+      <div>
+        <p>
+          HOCs are functions that take a component and return a new component
+          with added functionality. They are a powerful way to reuse component
+          logic.
+        </p>
+      </div>
+
+      <h3>What is React Router?</h3>
+      <div>
+        <p>
+          React Router is a library that allows you to handle navigation and
+          routing in your React application. It enables you to create
+          single-page applications with multiple views.
+        </p>
+      </div>
+
+      <h3>What is server-side rendering (SSR)?</h3>
+      <div>
+        <p>
+          SSR is a technique for rendering React components on the server and
+          sending the pre-rendered HTML to the client. This can improve initial
+          load time and SEO. C
+        </p>
+      </div>
+    </div>
+
+    <div id="accordion1">
+      <h3>Common Interview Questions</h3>
+
+      <div id="accordion2" class="p-0 m-0">
+        <h3>What are the advantages of using React?</h3>
+        <div class="p-0 m-0">
+          <ul>
+            <li>
+              Component-based architecture: Reusability, maintainability, and
+              testability.
+            </li>
+            <li>Virtual DOM: Efficient updates and improved performance.</li>
+            <li>JSX: Easier to write and understand UI code.</li>
+            <li>
+              Large community and ecosystem: Plenty of resources, libraries, and
+              support.
+            </li>
+          </ul>
+        </div>
+        <h3>What are the limitations of React?</h3>
+        <div class="p-0 m-0">
+          <ul>
+            <li>
+              Steep learning curve: Can be challenging to learn initially,
+              especially JSX and component lifecycle.  
+            </li>
+            <li>
+              Focus on UI: React is primarily a UI library and may require
+              additional libraries for routing, state management, etc.
+            </li>
+            <li>
+              Explain the difference between props and state. Props are
+              read-only data passed from parent to child, while state is
+              internal data managed within a component.
+            </li>
+          </ul>
+        </div>
+        <h3>How do you handle forms in React?</h3>
+        <div class="p-0 m-0">
+          <p>
+            React provides controlled components, where form data is handled in
+            the component's state, and uncontrolled components, where form data
+            is handled by the DOM.
+          </p>
+        </div>
+        <h3>What are the different lifecycle methods in React?</h3>
+        <div class="p-0 m-0">
+          <p>
+            Lifecycle methods are special methods that get called during
+            different phases of a component's life, such as mounting, updating,
+            and unmounting. (Note: With the introduction of Hooks, some
+            lifecycle methods are less relevant, but understanding the component
+            lifecycle is still important.)
+          </p>
+        </div>
+        <h3>What are the advantages of using React?</h3>
+        <div class="p-0 m-0">
+          <ul>
+            <li>
+              Component-based architecture: Reusability, maintainability, and
+              testability.
+            </li>
+            <li>Virtual DOM: Efficient updates and improved performance.</li>
+            <li>JSX: Easier to write and understand UI code.</li>
+            <li>
+              Large community and ecosystem: Plenty of resources, libraries, and
+              support.
+            </li>
+          </ul>
+        </div>
+
+        <h3>What are the limitations of React?</h3>
+        <div class="p-0 m-0">
+          <ul>
+            <li>
+              Steep learning curve: Can be challenging to learn initially,
+              especially JSX and component lifecycle.  
+            </li>
+            <li>
+              Focus on UI: React is primarily a UI library and may require
+              additional libraries for routing, state management, etc.
+            </li>
+            <li>
+              Explain the difference between props and state. Props are
+              read-only data passed from parent to child, while state is
+              internal data managed within a component.
+            </li>
+          </ul>
+        </div>
+        <h3>How do you handle forms in React?</h3>
+        <div class="p-0 m-0">
+          <p>
+            React provides controlled components, where form data is handled in
+            the component's state, and uncontrolled components, where form data
+            is handled by the DOM.
+          </p>
+        </div>
+        <h3>What are the different lifecycle methods in React?</h3>
+        <div class="p-0 m-0">
+          <p>
+            Lifecycle methods are special methods that get called during
+            different phases of a component's life, such as mounting, updating,
+            and unmounting. (Note: With the introduction of Hooks, some
+            lifecycle methods are less relevant, but understanding the component
+            lifecycle is still important.)
+          </p>
+        </div>
+      </div>
+    </div>
+    <footer class="bg-gray-800 text-white p-4 mt-1">
+      <div class="container mx-auto text-center">
+        <p>&copy; 2023 Your Company</p>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<!-- echo "# react-faq-jquery" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/bhupeshcoding/react-faq-jquery.git
+git push -u origin main -->
+
+<!-- git remote add origin https://github.com/bhupeshcoding/react-faq-jquery.git
+git branch -M main
+git push -u origin main -->
